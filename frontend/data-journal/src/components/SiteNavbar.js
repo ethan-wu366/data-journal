@@ -29,6 +29,7 @@ const SiteNavbar = (props) => {
                             width: '4rem',
                         }}
                     />
+                    <p style={style.NavText}>Data Journal</p>
                 </a>
             </Navbar.Brand>
             <Navbar.Toggle
