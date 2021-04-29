@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 import NavbarLogo from '../img/navbar-logo.png';
+import LandingLogo from '../img/Landing_Logo.png';
 
 const SiteNavbar = (props) => {
 
@@ -11,8 +12,8 @@ const SiteNavbar = (props) => {
         <Navbar
             expand="lg"
             style={{
-                padding: '.8rem 2rem .8rem 2rem',
-                minHeight: '10vh',
+                padding: '.2rem 2rem .2rem 2rem',
+                minHeight: '7vh',
                 background: '#A6CFD5',
             }}
             variant="dark"
@@ -22,14 +23,13 @@ const SiteNavbar = (props) => {
             <Navbar.Brand>
                 <a href="/">
                     <img
-                        src={NavbarLogo}
+                        src={LandingLogo}
                         alt="navbar logo"
                         className="selectDisable"
                         style={{
-                            width: '4rem',
+                            width: '17rem',
                         }}
                     />
-                    <p style={style.NavText}>Data Journal</p>
                 </a>
             </Navbar.Brand>
             <Navbar.Toggle
@@ -59,7 +59,7 @@ const style = {
     NavText: {
         fontFamily: 'Titillium Web',
         margin: '0 1rem',
-        fontSize: '22px',
+        fontSize: '20px',
     },
 };
 
