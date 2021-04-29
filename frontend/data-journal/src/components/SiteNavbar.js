@@ -37,31 +37,17 @@ const SiteNavbar = (props) => {
             />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <a href="/about">
-                        <p style={style.NavText}>About</p>
+                    <a href="/journal">
+                        <p style={style.NavText}>Journal</p>
                     </a>
-                    <a href="/team">
-                        <p style={style.NavText}>Team</p>
+                    <a href="/data">
+                        <p style={style.NavText}>Data</p>
                     </a>
-                    <a
-                        href="https://evberkeleyblog.weebly.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <p style={style.NavText}>Blog</p>
+                
+                    <a href="/settings">
+                        <p style={style.NavText}>Oski</p>
                     </a>
-                    <a href="/sponsors">
-                        <p style={style.NavText}>Sponsors</p>
-                    </a>
-                    <a href="/join">
-                        <p style={style.NavText}>Join Us</p>
-                    </a>
-                    <a href="mailto: berkeleyformulae@gmail.com">
-                        <p style={style.NavText}>Contact</p>
-                    </a>
-                    <a href="https://give.berkeley.edu/egiving/index.cfm?fund=FU1349000">
-                        <p style={style.NavText}>Donate</p>
-                    </a>
+                    
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
