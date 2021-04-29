@@ -39,7 +39,7 @@ const Data = () => {
     return (
         <div>
             <SiteNavbar sticky="false" bg="transparent" />
-            hello
+            data page
         </div>
     );
 };

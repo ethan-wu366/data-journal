@@ -39,7 +39,7 @@ const Landing = () => {
     return (
         <div>
             <SiteNavbar sticky="false" bg="transparent" />
-            hello
+            landing page
         </div>
     );
 };
