@@ -3,12 +3,13 @@ import $ from 'jquery';
 
 import SiteNavbar from './SiteNavbar';
 
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 
 import '../css/Landing.css';
+// import Background from '../img/landing_background.jpg';
 
 const Landing = () => {
     $(document).ready(function () {
@@ -39,7 +40,15 @@ const Landing = () => {
     return (
         <div>
             <SiteNavbar sticky="false" bg="transparent" />
-            landing page
+            <div id="landing-background">
+                <div id="info-container">
+                    <p>Gain valuable</p>
+                    <p>insights to your</p>
+                    <p>journaling</p>
+                    {/* <h3>Gain valuable insights to your journaling</h3> */}
+                    <Button style={{backgroundColor: "#1F5673"}} href="/journal">Sign up today</Button>
+                </div>
+            </div>
         </div>
     );
 };
