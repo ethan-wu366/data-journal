@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route,} from 'react-router-dom';
+
 
 import Landing from './components/Landing';
 import Login from './components/Login';
@@ -12,13 +13,12 @@ import './css/App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router
+      basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="/">
-            <Landing/>
-          </Route>
+          <Route path="/" exact component={Landing} />
           <Route path="/login">
-            <Login />
+            <Landing />
           </Route>
           <Route path="/data">
             <Data />
