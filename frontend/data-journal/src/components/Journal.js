@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 import SiteNavbar from './SiteNavbar';
 
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -39,7 +39,18 @@ const Journal = () => {
     return (
         <div>
             <SiteNavbar sticky="false" bg="transparent" />
-            hello
+            <body>
+                <h1>help</h1>
+                <Button class="btn-primary btn-xl rounded-pill" href="/journal"><h12>+ New Entry</h12></Button>
+                <Button class="btn-primary btn-xl rounded-pill" href="/journal"><h13><b>Yay 420</b></h13></Button>
+                <Button class="btn-primary btn-xl rounded-pill" href="/journal"><h12><b>I am sad today</b></h12></Button>
+                <div class="form-outline w-25 mb-4">
+                    <textarea class="form-control" id="textAreaExample4" rows="3"></textarea>
+                    <label class="form-label" for="textAreaExample4">25% width of the parent</label>
+                </div>
+                <textarea class="form-control" rows="1" id="comment"></textarea>
+                <label class="form-label" for="textAreaExample">Message</label>
+            </body>
         </div>
     );
 };
