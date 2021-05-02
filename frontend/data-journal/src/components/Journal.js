@@ -49,7 +49,7 @@ const Journal = () => {
                     <label class="form-label" for="textAreaExample4">25% width of the parent</label>
                 </div>
                 <textarea class="form-control" rows="1" id="comment"></textarea>
-                <label class="form-label" for="textAreaExample">Message</label>
+                <label class="form-label" for="comment">Message</label>
             </body>
         </div>
     );

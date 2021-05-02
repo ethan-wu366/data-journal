@@ -1,16 +1,16 @@
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.journal .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #A6CFD5 !important;
     color: black;
 }
 
-.btn-xl {
+.journal .btn-xl {
     width: 150px;
     height: 50px;
     left: 60px;
     top: 153px;
 }
 
-body {
+.journal body {
     background-color: #F7F3F3;;
   }
 
@@ -23,7 +23,7 @@ body {
     font-size: 14px;
     line-height: 19px;
 }
-#search {
+.journal #search {
     position: absolute;
     width: 250px;
     height: 50px;
@@ -35,7 +35,7 @@ body {
     
 }
 
-#newEntry {
+.journal #newEntry {
     position: absolute;
     width: 150px;
     height: 50px;
@@ -45,7 +45,7 @@ body {
     
 }
 
-#oldEntry {
+.journal #oldEntry {
     position: absolute;
     width: 270px;
     height: 60px;
