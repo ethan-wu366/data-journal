@@ -7,8 +7,10 @@ import SiteNavbar from './SiteNavbar';
 //import Container from 'react-bootstrap/Container';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form'
 
 import '../css/Data.css';
+import ChartPlaceholder from '../img/chart_placeholder.jpg';
 
 const Data = () => {
     $(document).ready(function () {
@@ -39,7 +41,19 @@ const Data = () => {
     return (
         <div>
             <SiteNavbar sticky="false" bg="transparent" />
-            data page
+            <div id="data-body">
+                <div id="graph">
+                    <h3 id="data-title">Data Analytics</h3>
+                    <img id="placeholder" src={ChartPlaceholder} alt="chart placeholder"></img>
+                </div>
+                <div id="search">
+                    <p id="average-day">Your average day has a rating of <b>7.2</b></p>
+                    <Form id="search-form">
+                        <Form.Control placeholder="Search a word"/>
+                    </Form>
+                    <p id="average-word">Your average rating for <b>swim</b> is 4.2</p>
+                </div>
+            </div>
         </div>
     );
 };

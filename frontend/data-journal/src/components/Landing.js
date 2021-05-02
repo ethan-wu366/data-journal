@@ -45,7 +45,6 @@ const Landing = () => {
                     <p>Gain valuable</p>
                     <p>insights to your</p>
                     <p>journaling</p>
-                    {/* <h3>Gain valuable insights to your journaling</h3> */}
                     <Button style={{backgroundColor: "#1F5673"}} href="/journal">Sign up today</Button>
                 </div>
             </div>
