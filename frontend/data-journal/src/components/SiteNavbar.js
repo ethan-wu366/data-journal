@@ -61,6 +61,7 @@ const style = {
         margin: '0 1rem',
         fontSize: '20px',
     },
+    
 };
 
 export default SiteNavbar;

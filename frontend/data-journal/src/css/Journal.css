@@ -3,17 +3,50 @@
     color: black;
 }
 
-.journal .btn-xl {
+.journal .form-control {
+    border: 0;
+    box-shadow: none;
+}
+
+.journal .new-button {
+    position: absolute;
     width: 150px;
     height: 50px;
     left: 60px;
-    top: 153px;
+    top: 80px;
 }
 
-.journal body {
-    background-color: #F7F3F3;;
-  }
+.journal .save-button {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 700px;
+    top: 770px;
+    background-color: white;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
 
+.journal .entry-button {
+    position: absolute;
+    width: 270px;
+    height: 60px;
+    
+}
+
+.journal .seq1 {
+    position: absolute;
+    left: 0px;
+    top: 145px;
+}
+
+.journal .seq2 {
+    position: absolute;
+    left: 0px;
+    top: 210px;
+}
 .journal h12 {
     color: black;
 }
@@ -23,26 +56,74 @@
     font-size: 14px;
     line-height: 19px;
 }
-.journal #search {
+
+.journal h14 {
+    position: absolute;
+    width: 863px;
+    height: 0px;
+    left: -163px;
+    top: 430px;
+
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transform: rotate(90deg);
+}
+
+.journal #journal-body {
+    position: absolute;
+    min-width: 100%;
+    min-height: 140%;
+    background-color: #F7F3F3;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.journal #search-box {
     position: absolute;
     width: 250px;
     height: 50px;
     left: 10px;
-    top: 91px;
-    margin-top: 3rem;
-
+    top: 10px;
     background: #FFFFFF;
-    
+    border-radius: 45px;
 }
 
-.journal #newEntry {
+.journal #title-box {
+    position: absolute;
+    width: 650px;
+    height: 70px;
+    left: 350px;
+    top: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.journal #rating-box {
     position: absolute;
     width: 150px;
-    height: 50px;
-    left: 60px;
-    top: 153px;
-    background: #A6CFD5;
-    
+    height: 70px;
+    left: 1050px;
+    top: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+}
+
+.journal #message-box {
+    position: absolute;
+    width: 850px;
+    height: 600px;
+    left: 350px;
+    top: 135px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .journal #oldEntry {
@@ -51,5 +132,37 @@
     height: 60px;
     left: 0px;
     top: 217px;
+}
+
+.journal #search-form {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 30px;
+    top: 15px;
+}
+
+.journal #title-form {
+    position: absolute;
+    width: 630px;
+    height: 300px;
+    left: 360px;
+    top: 45px;
+}
+
+.journal #rating-form {
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    left: 1055px;
+    top: 45px;
+}
+
+.journal #message-form {
+    position: absolute;
+    width: 830px;
+    height: 600px;
+    left: 360px;
+    top: 140px;
 }
 

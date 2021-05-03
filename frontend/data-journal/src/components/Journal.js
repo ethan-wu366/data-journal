@@ -39,22 +39,33 @@ const Journal = () => {
         });
     });
     return (
-        <div>
+        <div className="journal">
             <SiteNavbar sticky="false" bg="transparent" />
-            <body>
-                <h1>help</h1>
-                <Button class="btn-primary btn-xl rounded-pill" href="/journal"><h12>+ New Entry</h12></Button>
-                <Button class="btn-primary btn-xl rounded-pill" href="/journal"><h13><b>Yay 420</b></h13></Button>
-                <Button class="btn-primary btn-xl rounded-pill" href="/journal"><h12><b>I am sad today</b></h12></Button>
-                <div class="form-outline w-25 mb-4">
-                    <textarea class="form-control" id="textAreaExample4" rows="3"></textarea>
-                    <label class="form-label" for="textAreaExample4">25% width of the parent</label>
+                <div id="journal-body">
+                    <div id="search-box"></div>
+                    <Form id="search-form">
+                        <Form.Control placeholder="Search Journal"/>
+                    </Form>
+                    <Button className="btn-light new-button rounded-pill" href="/journal"><h12>+ New Entry</h12></Button>
+                    <Button className="btn-light entry-button seq1" href="/journal"><h13><b>Yay 420</b></h13></Button>
+                    <Button className="btn-light entry-button seq2" href="/journal"><h12><b>I am sad today</b></h12></Button>
+                    <h14></h14>
+                    <div id="title-box"></div>
+                    <Form id="title-form">
+                        <Form.Control placeholder="Enter Title Here"/>
+                    </Form>
+                    <div id ="rating-box"></div>
+                    <Form id="rating-form">
+                        <Form.Control placeholder="   /10"/>
+                    </Form>
+                    <div id="message-box"></div>
+                    <Form id="message-form">
+                        <Form.Control placeholder=""/>
+                    </Form>
+                    <Button className="btn-light save-button rounded-pill">
+                        Save
+                    </Button>
                 </div>
-                
-                <Form id="search-form">
-                    <Form.Control placeholder="Search a word"/>
-                </Form>
-            </body>
         </div>
     );
 };
