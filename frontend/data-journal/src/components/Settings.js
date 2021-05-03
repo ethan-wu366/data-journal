@@ -42,9 +42,7 @@ const Settings = () => {
     return (
         <div className="settings">
             <SiteNavbar sticky="false" bg="transparent" />
-            <Button className="btn-secondary save" href="/journal">
-                Save
-            </Button>
+            
             <div id="settings-body"></div>
             <div id="modul-body"></div>
             <h12>Oski Bear</h12>
@@ -74,7 +72,9 @@ const Settings = () => {
                     style={{ width: "250px" }}
                 />
             </div>
-            
+            <Button className="btn-secondary save" href="/journal">
+                Save
+            </Button>
         </div>
     );
 };
