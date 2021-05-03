@@ -62,11 +62,12 @@ const Settings = () => {
                 <Form.Control placeholder="Oski"/>
             </Form>
             <h13 id="color">Color Palette</h13>
-            <div className="color-palette">
+            <div id="color-palette">
                 <img
                     src={ColorPalette}
                     alt="colors"
                     className="selectDisable"
+                    style={{ width: "250px" }}
                 />
             </div>
         </div>
