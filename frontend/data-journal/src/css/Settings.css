@@ -3,6 +3,12 @@
     color: black;
 }
 
+.settings .form-control {
+    border: 0;
+    box-shadow: none;
+    background-color: #F7F3F3 ;
+}
+
 .settings #settings-body {
     position: absolute;
     min-width: 100%;
@@ -126,10 +132,10 @@
 
 .settings #first-name-form {
     position: absolute;
-    width: 250px;
+    width: 240px;
     height: 50px;
-    left: 594px;
-    top: 283px;
+    left: 599px;
+    top: 288px;
 }
 
 .settings #last-name-box {
@@ -145,10 +151,10 @@
 
 .settings #last-name-form {
     position: absolute;
-    width: 250px;
+    width: 240px;
     height: 50px;
-    left: 594px;
-    top: 362px;
+    left: 599px;
+    top: 365px;
 }
 
 .settings #email-box {
@@ -164,10 +170,10 @@
 
 .settings #email-form {
     position: absolute;
-    width: 250px;
+    width: 240px;
     height: 50px;
-    left: 594px;
-    top: 441px;
+    left: 599px;
+    top: 446px;
 }
 
 .settings .save {

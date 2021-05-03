@@ -60,7 +60,7 @@ const Settings = () => {
             <h13 id="email">Email</h13>
             <div id="email-box"></div>
             <Form id="email-form">
-                <Form.Control placeholder="Oski"/>
+                <Form.Control placeholder="oski@berkeley.edu"/>
             </Form>
             <h13 id="color">Color Palette</h13>
             
@@ -72,7 +72,7 @@ const Settings = () => {
                     style={{ width: "250px" }}
                 />
             </div>
-            <Button className="btn-secondary save" href="/journal">
+            <Button className="btn-light btn-secondary save" href="/journal">
                 Save
             </Button>
         </div>
