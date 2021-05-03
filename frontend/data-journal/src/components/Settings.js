@@ -7,6 +7,9 @@ import SiteNavbar from './SiteNavbar';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+
+import ColorPalette from "../img/color_pallete.png"
 
 import '../css/Settings.css';
 
@@ -43,11 +46,29 @@ const Settings = () => {
             <div id="modul-body"></div>
             <h12>Oski Bear</h12>
             <h14>Joined on 4/15/21</h14>
-            <h13>First Name</h13>
+            <h13 id="first-name">First Name</h13>
             <div id="first-name-box"></div>
             <Form id="first-name-form">
                 <Form.Control placeholder="Oski"/>
             </Form>
+            <h13 id="last-name">Last Name</h13>
+            <div id="last-name-box"></div>
+            <Form id="last-name-form">
+                <Form.Control placeholder="Bear"/>
+            </Form>
+            <h13 id="email">Email</h13>
+            <div id="email-box"></div>
+            <Form id="email-form">
+                <Form.Control placeholder="Oski"/>
+            </Form>
+            <h13 id="color">Color Palette</h13>
+            <div className="color-palette">
+                <img
+                    src={ColorPalette}
+                    alt="colors"
+                    className="selectDisable"
+                />
+            </div>
         </div>
     );
 };

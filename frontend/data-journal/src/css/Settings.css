@@ -38,12 +38,6 @@
 }
 
 .settings h13 {
-    position: absolute;
-    width: 77px;
-    height: 10px;
-    left: 594px;
-    top: 267px;
-
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -74,6 +68,45 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
+.settings #first-name {
+    position: absolute;
+    width: 77px;
+    height: 10px;
+    left: 594px;
+    top: 267px;
+}
+
+.settings #last-name {
+    position: absolute;
+    width: 71px;
+    height: 10px;
+    left: 594px;
+    top: 346px;
+}
+
+.settings #email {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    left: 594px;
+    top: 425px;
+}
+
+.settings #color {
+    position: absolute;
+    width: 94px;
+    height: 10px;
+    left: 594px;
+    top: 503px;
+}
+
+.settings #color-palette {
+    position: absolute;
+    width: 250px;
+    height: 125px;
+    left: 594px;
+    top: 519px;
+}
 
 .settings #first-name-box {
     position: absolute;
@@ -92,4 +125,42 @@
     height: 50px;
     left: 594px;
     top: 283px;
+}
+
+.settings #last-name-box {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 594px;
+    top: 362px;
+
+    background: #F7F3F3;
+    border-radius: 10px;
+}
+
+.settings #last-name-form {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 594px;
+    top: 362px;
+}
+
+.settings #email-box {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 594px;
+    top: 441px;
+
+    background: #F7F3F3;
+    border-radius: 10px;
+}
+
+.settings #email-form {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 594px;
+    top: 441px;
 }
