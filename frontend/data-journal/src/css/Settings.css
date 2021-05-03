@@ -1,0 +1,75 @@
+.settings #settings-body {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #F7F3F3;
+    display: flex;
+    flex-direction: row;
+}
+
+.settings #modul-body {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    left: 470px;
+    top: 150px;
+
+    background: #A6CFD5;
+    border-radius: 15px;
+}
+
+.settings h12 {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 620px;
+    top: 168px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.settings h13 {
+    position: absolute;
+    width: 77px;
+    height: 10px;
+    left: 594px;
+    top: 267px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.settings h14 {
+    position: absolute;
+    width: 129px;
+    height: 31px;
+    left: 655px;
+    top: 227px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+}

@@ -37,9 +37,13 @@ const Settings = () => {
         });
     });
     return (
-        <div>
+        <div className="settings">
             <SiteNavbar sticky="false" bg="transparent" />
-            hello
+            <div id="settings-body"></div>
+            <div id="modul-body"></div>
+            <h12>Oski Bear</h12>
+            <h14>Joined on 4/15/21</h14>
+            <h13>First Name</h13>
         </div>
     );
 };
