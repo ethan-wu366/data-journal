@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form'
+
 
 import '../css/Journal.css';
 
@@ -48,8 +50,10 @@ const Journal = () => {
                     <textarea class="form-control" id="textAreaExample4" rows="3"></textarea>
                     <label class="form-label" for="textAreaExample4">25% width of the parent</label>
                 </div>
-                <textarea class="form-control" rows="1" id="comment"></textarea>
-                <label class="form-label" for="comment">Message</label>
+                
+                <Form id="search-form">
+                    <Form.Control placeholder="Search a word"/>
+                </Form>
             </body>
         </div>
     );
