@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 import SiteNavbar from './SiteNavbar';
 
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -42,6 +42,9 @@ const Settings = () => {
     return (
         <div className="settings">
             <SiteNavbar sticky="false" bg="transparent" />
+            <Button className="btn-secondary save" href="/journal">
+                Save
+            </Button>
             <div id="settings-body"></div>
             <div id="modul-body"></div>
             <h12>Oski Bear</h12>
@@ -62,6 +65,7 @@ const Settings = () => {
                 <Form.Control placeholder="Oski"/>
             </Form>
             <h13 id="color">Color Palette</h13>
+            
             <div id="color-palette">
                 <img
                     src={ColorPalette}
@@ -70,6 +74,7 @@ const Settings = () => {
                     style={{ width: "250px" }}
                 />
             </div>
+            
         </div>
     );
 };

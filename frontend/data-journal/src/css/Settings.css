@@ -1,3 +1,8 @@
+.settings .btn-secondary {
+    background-color: #F7F3F3 !important;
+    color: black;
+}
+
 .settings #settings-body {
     position: absolute;
     min-width: 100%;
@@ -163,4 +168,15 @@
     height: 50px;
     left: 594px;
     top: 441px;
+}
+
+.settings #save {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    left: 670px;
+    top: 876px;
+
+    background: #F7F3F3;
+    border-radius: 10px;
 }
