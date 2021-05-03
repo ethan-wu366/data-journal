@@ -44,6 +44,10 @@ const Settings = () => {
             <h12>Oski Bear</h12>
             <h14>Joined on 4/15/21</h14>
             <h13>First Name</h13>
+            <div id="first-name-box"></div>
+            <Form id="first-name-form">
+                <Form.Control placeholder="Oski"/>
+            </Form>
         </div>
     );
 };
