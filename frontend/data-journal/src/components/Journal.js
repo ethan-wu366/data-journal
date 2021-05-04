@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import $ from 'jquery';
 
 import SiteNavbar from './SiteNavbar';
@@ -38,32 +38,100 @@ const Journal = () => {
             });
         });
     });
+
+    let [journalEntries, setJournalEntries] = useState([]);
+    let [selectedEntry, setSelectedEntry] = useState(null);
+    let [searchString, setSearchString] = useState("");
+    let refTitle = useRef(null);
+    let refRating = useRef(null);
+    let refDescription = useRef(null);
+
+    function updateEntries() {
+        $.get("http://localhost:8000/api/journal/list/", res => {
+            setJournalEntries(res.map(entry => {
+                return {
+                    pk: entry.pk,
+                    ...entry.fields
+                }
+            }))
+        })
+    }
+
+    console.log(journalEntries);
+
+    useEffect(updateEntries, [])
+
+    function searchFunction(entry) {
+        if (searchString == "") {
+            return true;
+        }
+        return entry.title.toLowerCase().includes(searchString.toLowerCase()) || entry.entry.toLowerCase().includes(searchString.toLowerCase());
+    }
+
+    function newEntry() {
+        $.post("http://localhost:8000/api/journal/add/", `{
+            "title": "Untitled journal entry",
+            "rating": 0,
+            "entry": ""
+        }`, res => {
+            updateEntries();
+        });
+    }
+
+    let selectedEntryData = journalEntries.filter(e => e.pk == selectedEntry);
+
+    function selectEntry(id) {
+        console.log(refTitle);
+        selectedEntryData = journalEntries.find(e => e.pk == id);
+        refTitle.current.value = selectedEntryData.title;
+        refRating.current.value = selectedEntryData.rating;
+        refDescription.current.value = selectedEntryData.entry;
+        setSelectedEntry(id);
+    }
+
+    function updateEntry() {
+        // lol no thanks
+    }
+
+    function deleteEntry() {
+        $.post("http://localhost:8000/api/journal/"+selectedEntry+"/", res => {
+            updateEntries();
+        });
+    }
+
+    let htmlEntries = journalEntries.filter(searchFunction).map(({ pk, title, rating, entry }, i) => 
+        <Button className={"btn-light entry-button seq" + (i + 1)} onClick={() => selectEntry(pk)}><h13><b>{title}</b></h13></Button>
+    );
+
+
     return (
         <div className="journal">
             <SiteNavbar sticky="false" bg="transparent" />
                 <div id="journal-body">
                     <div id="search-box"></div>
                     <Form id="search-form">
-                        <Form.Control placeholder="Search Journal"/>
+                        <Form.Control placeholder="Search Journal" onChange={evt => setSearchString(evt.target.value)}/>
                     </Form>
-                    <Button className="btn-light new-button rounded-pill" href="/journal"><h12>+ New Entry</h12></Button>
-                    <Button className="btn-light entry-button seq1" href="/journal"><h13><b>Yay 420</b></h13></Button>
-                    <Button className="btn-light entry-button seq2" href="/journal"><h12><b>I am sad today</b></h12></Button>
+                    <Button className="btn-light new-button rounded-pill" onClick={newEntry}><h12>+ New Entry</h12></Button>
+                    {htmlEntries}
                     <h14></h14>
                     <div id="title-box"></div>
                     <Form id="title-form">
-                        <Form.Control placeholder="Enter Title Here"/>
+                        <Form.Control placeholder="Enter Title Here" ref={refTitle}/>
                     </Form>
                     <div id ="rating-box"></div>
                     <Form id="rating-form">
-                        <Form.Control placeholder="   /10"/>
+                        <Form.Control placeholder="   /10" ref={refRating}/>
                     </Form>
                     <div id="message-box"></div>
                     <Form id="message-form">
-                        <Form.Control placeholder=""/>
+                        <Form.Control placeholder="" ref={refDescription}/>
                     </Form>
-                    <Button className="btn-light save-button rounded-pill">
+                    <Button className="btn-light save-button rounded-pill" onClick={updateEntry}>
                         Save
+                    </Button>
+                    <Button className="btn-light save-button rounded-pill" style={{marginLeft: "200px"}} onClick={deleteEntry}>
+                        Delete
                     </Button>
                 </div>
         </div>
