@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import $ from 'jquery';
+import Plot from 'react-plotly.js';
 
 import SiteNavbar from './SiteNavbar';
 
@@ -11,6 +12,7 @@ import Form from 'react-bootstrap/Form'
 
 import '../css/Data.css';
 import ChartPlaceholder from '../img/chart_placeholder.jpg';
+
 
 const Data = () => {
     $(document).ready(function () {
@@ -38,20 +40,65 @@ const Data = () => {
             });
         });
     });
+
+    let [journalEntries, setJournalEntries] = useState([]);
+    let [wordSearch, setWordSearch] = useState("");
+
+    useEffect(() => {
+        $.get("http://localhost:8000/api/journal/list/", res => {
+            setJournalEntries(res.map(entry => {
+                return {
+                    pk: entry.pk,
+                    ...entry.fields
+                }
+            }))
+        })
+    }, []);
+
+    console.log(journalEntries);
+
+    let averageRating = journalEntries.reduce((cum, entry) => {
+        return cum + entry.rating;
+    }, 0) / journalEntries.length;
+
+    function searchFunction(entry) {
+        if (wordSearch == "") {
+            return true;
+        }
+        return entry.title.toLowerCase().includes(wordSearch.toLowerCase()) || entry.entry.toLowerCase().includes(wordSearch.toLowerCase());
+    }
+
+    let averageRatingWord = journalEntries.filter(searchFunction).reduce((cum, entry) => {
+        return cum + entry.rating;
+    }, 0) / journalEntries.length;
+
     return (
         <div>
             <SiteNavbar sticky="false" bg="transparent" />
             <div id="data-body">
                 <div id="graph">
                     <h3 id="data-title">Data Analytics</h3>
-                    <img id="placeholder" src={ChartPlaceholder} alt="chart placeholder"></img>
+                    <Plot id="placeholder"
+                        data={[
+                        {
+                            x: [...journalEntries.map((a, i) => i)],
+                            y: [...journalEntries.map(a => a.rating)],
+                            type: 'scatter',
+                            mode: 'markers',
+                            marker: {color: 'red'},
+                        },
+                        ]}
+                        layout={ {width: 720, height: 540, title: 'A Fancy Plot'} }
+                    />
                 </div>
                 <div id="search">
-                    <p id="average-day">Your average day has a rating of <b>7.2</b></p>
+                    <p id="average-day">Your average day has a rating of <b>{averageRating}</b></p>
                     <Form id="search-form">
-                        <Form.Control placeholder="Search a word"/>
+                        <Form.Control placeholder="Search a word" onChange={evt => setWordSearch(evt.target.value)}/>
                     </Form>
-                    <p id="average-word">Your average rating for <b>swim</b> is 4.2</p>
+                    {
+                        [wordSearch != "" ? <p id="average-word">Your average rating for <b>{wordSearch}</b> is {averageRatingWord}</p> : <p id="average-word">Search!</p>]
+                    }
                 </div>
             </div>
         </div>
