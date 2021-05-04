@@ -90,7 +90,19 @@ const Journal = () => {
     }
 
     function updateEntry() {
-        // lol no thanks
+        let title = refTitle.current.value;
+        let rating = refRating.current.value;
+        let description = refDescription.current.value;
+
+        $.post("http://localhost:8000/api/journal/"+selectedEntry+"/", res => {
+            $.post("http://localhost:8000/api/journal/add/", `{
+                "title": "${title}",
+                "rating": ${rating},
+                "entry": "${description}"
+            }`, res => {
+                updateEntries();
+            });
+        });
     }
 
     function deleteEntry() {

@@ -23,14 +23,9 @@ def journalAction(request, id):
   if request.method == "POST": # delete journal by id
     Journal.objects.get(pk=id).delete()
     return JsonResponse({'detail': 'Successfully deleted journal'})
-  
-  if request.method == "UPDATE": # update journal by id
-    # fuck this lol
-    return JsonResponse({'detail': 'Successfully updated journal'})
 
   return JsonResponse({'detail': 'Invalid protocol'})
 
-@require_POST
 def addJournal(request):
   data = json.loads(request.body)
   title = data.get('title')
