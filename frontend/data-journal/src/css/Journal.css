@@ -30,13 +30,19 @@
 }
 
 .journal .entry-button {
-    position: absolute;
+    position: relative;
     width: 270px;
     height: 60px;
-    
 }
 
-.journal .seq1 {
+.journal #entries {
+    position:absolute;
+    top: 145px;
+    display:flex;
+    flex-direction:column;
+}
+
+/* .journal .seq1 {
     position: absolute;
     left: 0px;
     top: 145px;
@@ -46,7 +52,7 @@
     position: absolute;
     left: 0px;
     top: 210px;
-}
+} */
 .journal h12 {
     color: black;
 }

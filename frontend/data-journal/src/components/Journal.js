@@ -125,7 +125,9 @@ const Journal = () => {
                         <Form.Control placeholder="Search Journal" onChange={evt => setSearchString(evt.target.value)}/>
                     </Form>
                     <Button className="btn-light new-button rounded-pill" onClick={newEntry}><h12>+ New Entry</h12></Button>
-                    {htmlEntries}
+                    <div id="entries">
+                        {htmlEntries}
+                    </div>
                     <h14></h14>
                     <div id="title-box"></div>
                     <Form id="title-form">
