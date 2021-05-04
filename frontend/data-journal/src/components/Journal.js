@@ -141,10 +141,10 @@ const Journal = () => {
                     <Form id="message-form">
                         <Form.Control placeholder="" ref={refDescription}/>
                     </Form>
-                    <Button className="btn-light save-button rounded-pill" onClick={updateEntry}>
+                    <Button id="save-button" className="btn-light save-button rounded-pill" onClick={updateEntry}>
                         Save
                     </Button>
-                    <Button className="btn-light save-button rounded-pill" style={{marginLeft: "200px"}} onClick={deleteEntry}>
+                    <Button id="delete-button" className="btn-light save-button rounded-pill" style={{marginLeft: "200px"}} onClick={deleteEntry}>
                         Delete
                     </Button>
                 </div>

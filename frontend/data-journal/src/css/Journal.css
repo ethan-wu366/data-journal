@@ -98,7 +98,7 @@
     position: absolute;
     width: 650px;
     height: 70px;
-    left: 350px;
+    left: 600px; /* 350*/
     top: 30px;
 
     background: #FFFFFF;
@@ -111,7 +111,7 @@
     position: absolute;
     width: 150px;
     height: 70px;
-    left: 1050px;
+    left: 1300px; /* 1050 */
     top: 30px;
     box-sizing: border-box;
     border-radius: 15px;
@@ -123,7 +123,7 @@
     position: absolute;
     width: 850px;
     height: 600px;
-    left: 350px;
+    left: 600px; /* 350 */
     top: 135px;
 
     background: #FFFFFF;
@@ -152,7 +152,7 @@
     position: absolute;
     width: 630px;
     height: 300px;
-    left: 360px;
+    left: 610px; /* 360 */
     top: 45px;
 }
 
@@ -160,7 +160,7 @@
     position: absolute;
     width: 140px;
     height: 100px;
-    left: 1055px;
+    left: 1305px; /*1055 */
     top: 45px;
 }
 
@@ -168,7 +168,19 @@
     position: absolute;
     width: 830px;
     height: 600px;
-    left: 360px;
+    left: 610px; /* 360 */
     top: 140px;
+}
+
+.journal #save-button {
+    position: absolute;
+    left: 850px;
+    top: 775px;
+}
+
+.journal #delete-button {
+    position: absolute;
+    left: 850px;
+    top: 775px;
 }
 
