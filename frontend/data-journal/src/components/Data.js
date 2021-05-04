@@ -70,7 +70,7 @@ const Data = () => {
 
     let averageRatingWord = journalEntries.filter(searchFunction).reduce((cum, entry) => {
         return cum + entry.rating;
-    }, 0) / journalEntries.length;
+    }, 0) / journalEntries.filter(searchFunction).length;
 
     return (
         <div>
